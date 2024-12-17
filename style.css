@@ -1,0 +1,283 @@
+/*BARRE DE NAVIGATION*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    height: 100vh;
+    width: 100vw;
+    background-color: black ;
+    background-size: cover;  
+}
+
+.navbar{
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background-color: black;
+}
+
+.navbar a{
+    color: rgb(246, 248, 249);
+}
+
+.navbar .logo{
+    font-size: 2em;
+
+    font-weight: bold;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.actif a{
+    color: rgb(244, 17, 17);
+    font-weight: 600;
+}
+
+/*POUR CHANGER LA COULEUR DE L'ECRITURE AU TOUCHE DE LA SOURIE*/
+a:hover{
+    color:red;
+}
+
+/*conteneur principal du header*/
+.header-content{
+    text-align: center;
+    padding: 20px;
+}
+
+/*conteneur de l'image avec le text*/
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.full-screen-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/*centrer le texte*/
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: rgb(253, 251, 251);
+    font-size: 2rem;
+    z-index: 1;
+    text-align: center;
+}
+
+/*opacité*/
+.image-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.509);
+    z-index: 0;
+}
+
+.main-content{
+    padding-top: 50px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-content {
+    padding: 50px 20px;  
+    text-align: center; 
+    margin-top: 20px;  
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.feature {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* BUTTON */
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: black; /* Couleur de fond du bouton */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/*  FOOTER OU PIED DE PAGE */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/*  MEDIA QUERIES (Responsivité pour les petits écrans)  */
+
+/* Sur les écrans plus petits, réduire la taille du texte */
+@media (max-width: 768px) {
+    .overlay-text h1 {
+        font-size: 2rem;  /* Réduire la taille du texte pour les petits écrans */
+    }
+
+    .features {
+        flex-direction: column; /* Placer les éléments de .features sous forme de colonne */
+        padding: 30px 20px;
+    }
+
+    .feature {
+        width: 100%;  /* Chaque feature occupe toute la largeur */
+        margin-bottom: 20px;
+    }
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;  /* Organise le footer verticalement */
+    justify-content: flex-start;  /* Le formulaire reste en haut */
+    align-items: flex-start;  /* Aligne tout le contenu à gauche */
+    padding: 20px;
+    height: 400px;  /* Hauteur définie pour le footer, ajustable */
+}
+
+/* Formulaire dans le footer */
+.footer-form {
+    width: 20%;  /* Le formulaire prend toute la largeur disponible */
+    margin-bottom: 10px;  /* Espacement sous le formulaire */
+    text-align: left;  /* Aligne le texte du formulaire à gauche */
+}
+
+.footer-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.footer-form .form-label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.footer-form .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.footer-form .btn-submit {
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.footer-form .btn-submit:hover {
+    background-color: #e53d2c;
+}
+/*ICONES*/
+.footer-form {
+    text-align: center;
+    padding: 1Opx;
+}
+
+.social-contact-text {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+}
+
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 30px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change la couleur au survol */
+}
+
+
+/* Texte de copyright */
+.footer-content {
+    margin-top: auto;  /* Place le texte en bas du footer */
+    text-align: center;  /* Centrer le texte de copyright */
+    width: 100%;
+    font-size: 1rem;
+}
